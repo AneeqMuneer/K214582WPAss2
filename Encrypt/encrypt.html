@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        form {
+            margin-top: 2rem;
+        }
+
+        label, input {
+            margin-bottom: 1rem;
+        }
+
+        .bigbox{
+            height: 4rem;
+        }
+
+        @media only screen and (max-width: 600px) {
+            body{
+                font-size: 1.5rem;
+            }
+
+            form{
+                margin-top: 2rem;
+            }
+
+            label, input{
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <h2><u>Encryption Page</u></h2>
+    <form id="EncryptionForm">
+        <label for="public">Public Key:</label>
+        <input type="text" id="public" name="public" placeholder="Public Key" required>
+        <br>
+        <label for="plain">Plain text:</label>
+        <input type="text" id="plain" name="plain" class="bigbox" placeholder="text" required>
+        <br>
+        <label for="cipher">Cipher text:</label>
+        <input type="text" id="cipher" name="cipher" class="bigbox" placeholder="encrypted text" readonly>
+        <br>
+        <input type="button" id="encryptbutton" value="Encrypt" onclick="encryptor()">
+    </form>
+
+    <script src="encrypt.js"></script>
+</body>
+</html>

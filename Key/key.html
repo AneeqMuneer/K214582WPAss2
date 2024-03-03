@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private and Public Key Generation</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        form {
+            margin-top: 2rem;
+        }
+
+        label, input {
+            margin-bottom: 1rem;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            body{
+                font-size: 1.5rem;
+            }
+
+            form{
+                margin-top: 2rem;
+            }
+
+            label, input{
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <h2><u>Key Generation Page</u></h2>
+    <form id="keyGenerationForm">
+        <label for="public">Public Key:</label>
+        <input type="text" id="public" name="public" placeholder="Public Key" readonly>
+        <br>
+        <label for="private">Private Key:</label>
+        <input type="text" id="private" name="private" placeholder="Private Key" readonly>
+        <br>
+        <input type="button" value="Generate Keys" onclick="RSAgenerateKeys()">
+    </form>
+
+    <script src="./key.js"></script>
+    
+</body>
+</html>

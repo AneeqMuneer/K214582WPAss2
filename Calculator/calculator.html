@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            text-align: center;
+            font-size: 16px;
+        }
+
+        div{
+            border-radius: 0.625rem;
+            margin: 1rem 0.55rem;
+        }
+
+        button{
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.625rem;
+            border: 1px solid black;
+            color: white;
+            vertical-align: center;
+        }
+
+        .imp{
+            background-color: #E78F06;
+        }
+
+        .normal{
+            background-color: #2F3130;
+        }
+
+        button:hover{
+            color: black;
+            background-color: white;
+        }
+
+        #screen{
+            font-size: larger;
+        }
+
+        div input{
+            height: 2.5rem;
+            width: 10.4rem;
+            text-align: right;
+            border-radius: 0.625rem;
+            border: 1px solid black;
+            background-color: #bccd95;
+            margin-top: 0.75rem;
+            margin-bottom: 0.325rem;
+            color: black;
+            padding: 0rem 0rem;
+        }
+
+        div #row4{
+            margin-bottom: 1rem;
+        }
+
+        #Calculator{
+            border: 1px solid black;
+            width: 13rem;
+            margin: 8rem 34rem;
+            background-color: black;
+        }
+
+        @media only screen and (max-width: 600px){
+            #Calculator{
+                margin: 7.5rem 6rem;
+            }
+        }
+
+        @media only screen and (min-width: 600px) and (max-width: 900px){
+            #Calculator{
+                margin: 7.5rem 17rem;
+            }
+        }
+    </style>
+</head>
+<body onload="initialize()">
+    <div id="Calculator">
+        <div id="Screen">
+            <input type="text" id="inputoutput" value="">
+        </div>
+        <div id="buttons">
+            <div id="row1" class="buttonrow">
+                <button class="normal" onclick="operand('7')"> 7 </button>
+                <button class="normal" onclick="operand('8')"> 8 </button>
+                <button class="normal" onclick="operand('9')"> 9 </button>
+                <button class="imp" onclick="switchoperand('/')"> / </button>
+            </div>
+            <div id="row2" class="buttonrow">
+                <button class="normal" onclick="operand('4')"> 4 </button>
+                <button class="normal" onclick="operand('5')"> 5 </button>
+                <button class="normal" onclick="operand('6')"> 6 </button>
+                <button class="imp" onclick="switchoperand('*')"> * </button>
+            </div>
+            <div id="row3" class="buttonrow">
+                <button class="normal" onclick="operand('1')"> 1 </button>
+                <button class="normal" onclick="operand('2')"> 2 </button>
+                <button class="normal" onclick="operand('3')"> 3 </button>
+                <button class="imp" onclick="switchoperand('-')"> - </button>
+            </div>
+            <div id="row4" class="buttonrow">
+                <button class="normal" onclick="operand('0')"> 0 </button>
+                <button class="normal" onclick="operand('.')"><strong> . </strong></button>
+                <button class="imp" onclick="switchoperand('+')"> + </button>
+                <button class="imp" onclick="solve()"> = </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
